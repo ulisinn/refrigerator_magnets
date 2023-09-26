@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "magnets" "\0"
+            VALUE "FileDescription", "Refrigerator Magnets" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "magnets" "\0"
+            VALUE "InternalName", "Refrigerator Magnets" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "magnets.exe" "\0"
-            VALUE "ProductName", "magnets" "\0"
+            VALUE "ProductName", "Refrigerator Magnets" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
