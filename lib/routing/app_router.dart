@@ -3,21 +3,15 @@ import 'package:magnets/features/screens/authenticated_landing_screen.dart';
 import 'package:magnets/features/screens/create_account_screen.dart';
 import 'package:magnets/features/screens/login_screen.dart';
 import 'package:magnets/features/screens/logout.dart';
+import 'package:magnets/features/screens/network_client.dart';
 import 'package:magnets/features/screens/splash_screen.dart';
-
-// enum AppRoute{
-//   home,
-//   createAccount,
-//   login,
-//   logout,
-//   landing,
-// }
 
 enum AppRoute {
   home('/'),
   createAccount('/createAccount'),
   login('/login'),
   logout('/logout'),
+  networkClient('/networkClient'),
   landing('/landing');
 
   const AppRoute(this.name);
@@ -29,32 +23,37 @@ enum AppRoute {
 }
 
 final routerConfig = GoRouter(
-    initialLocation: '/',
-    debugLogDiagnostics: true,
+    initialLocation: '/networkClient',
+    debugLogDiagnostics: false,
     routes: [
-  GoRoute(
-    path: '/',
-    name: AppRoute.home.name,
-    builder: (context, state) => const SplashScreen(),
-  ),
-  GoRoute(
-    path: '/login',
-    name: AppRoute.login.name,
-    builder: (context, state) => const LoginScreen(),
-  ),
-  GoRoute(
-    path: '/createAccount',
-    name: AppRoute.createAccount.name,
-    builder: (context, state) => const CreateAccountScreen(),
-  ),
-  GoRoute(
-    path: '/logout',
-    name: AppRoute.logout.name,
-    builder: (context, state) => const LogOutScreen(),
-  ),
-  GoRoute(
-    path: '/landing',
-    name: AppRoute.landing.name,
-    builder: (context, state) => const LandingScreen(),
-  ),
-]);
+      GoRoute(
+        path: '/',
+        name: AppRoute.home.name,
+        builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: '/networkClient',
+        name: AppRoute.networkClient.name,
+        builder: (context, state) => const NetWorkClientScreen(),
+      ),
+      GoRoute(
+        path: '/login',
+        name: AppRoute.login.name,
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: '/createAccount',
+        name: AppRoute.createAccount.name,
+        builder: (context, state) => const CreateAccountScreen(),
+      ),
+      GoRoute(
+        path: '/logout',
+        name: AppRoute.logout.name,
+        builder: (context, state) => const LogOutScreen(),
+      ),
+      GoRoute(
+        path: '/landing',
+        name: AppRoute.landing.name,
+        builder: (context, state) => const LandingScreen(),
+      ),
+    ]);
