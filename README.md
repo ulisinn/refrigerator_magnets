@@ -15,6 +15,10 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+LINTER:
+dart fix --dry-run  
+dart fix --apply
+
 DOTENV:  
 https://dev.to/khalidk799/environment-variables-its-best-practices-1o1o
 https://developer.school/tutorials/how-to-use-environment-variables-with-flutter-dotenv
