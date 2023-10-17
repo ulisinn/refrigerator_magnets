@@ -17,3 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 DOTENV:  
 https://dev.to/khalidk799/environment-variables-its-best-practices-1o1o
+https://developer.school/tutorials/how-to-use-environment-variables-with-flutter-dotenv
