@@ -24,3 +24,6 @@ https://pub.dev/packages/shared_preferences
 
 JWT:
 https://pub.dev/documentation/jwt_decoder/latest/
+
+INTL:
+https://api.flutter.dev/flutter/intl/intl-library.html
