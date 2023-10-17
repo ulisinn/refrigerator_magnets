@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:magnets/core/networking/app_dio_client.dart';
 import 'package:magnets/core/networking/app_http_client.dart';
 import 'package:magnets/core/networking/app_request.dart';
+
+import '../../routing/app_router.dart';
 
 class NetWorkClientScreen extends StatefulWidget {
   const NetWorkClientScreen({super.key});
@@ -79,19 +82,32 @@ class _NetWorkClientScreen extends State<NetWorkClientScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Network Client'),
+        title: const Text(
+          'Network Client Screen',
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Network Client'),
+            const Text(
+              'Network Client Screen',
+              style: TextStyle(fontSize: 24),
+            ),
             const SizedBox(
               height: 30,
             ),
             ElevatedButton(
                 onPressed: makeDioClientCallPost,
-                child: Text('makeHttpClientCallPost'))
+                child: Text('makeDioClientCallPost')),
+            const SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  context.go(AppRoute.home.name);
+                },
+                child: Text('HOME'))
           ],
         ),
       ),
