@@ -76,7 +76,6 @@ class AppHttpClient {
       } else {
         return AppResponse.failed();
       }
-      return AppResponse.failed();
     } catch (e) {
       print(e);
       return AppResponse.failed();

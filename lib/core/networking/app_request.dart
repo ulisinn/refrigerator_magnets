@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 enum HttpMethod {
   get,
   post,

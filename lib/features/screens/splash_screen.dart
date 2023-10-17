@@ -8,54 +8,50 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              'Splash/Home Screen',
-              style: TextStyle(fontSize: 24),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.go(AppRoute.login.name);
-              },
-              child: Text("Go to Login"),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.go(AppRoute.createAccount.name);
-              },
-              child: Text("Go to Create Account"),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.go(AppRoute.logout.name);
-              },
-              child: Text("Go to Logout"),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.go(AppRoute.landing.name);
-              },
-              child: Text("Go to Landing Screen"),
-            ),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Splash/Home Screen',
+            style: TextStyle(fontSize: 24),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoute.login.name);
+            },
+            child: const Text('Go to Login'),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoute.createAccount.name);
+            },
+            child: const Text('Go to Create Account'),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoute.logout.name);
+            },
+            child: const Text('Go to Logout'),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoute.landing.name);
+            },
+            child: const Text('Go to Landing Screen'),
+          ),
+        ],
       ),
     );
   }

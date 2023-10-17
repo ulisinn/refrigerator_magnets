@@ -99,7 +99,7 @@ class _NetWorkClientScreen extends State<NetWorkClientScreen> {
             ),
             ElevatedButton(
                 onPressed: makeDioClientCallPost,
-                child: Text('makeDioClientCallPost')),
+                child: const Text('makeDioClientCallPost')),
             const SizedBox(
               height: 30,
             ),
@@ -107,7 +107,7 @@ class _NetWorkClientScreen extends State<NetWorkClientScreen> {
                 onPressed: () {
                   context.go(AppRoute.home.name);
                 },
-                child: Text('HOME'))
+                child: const Text('HOME'))
           ],
         ),
       ),
