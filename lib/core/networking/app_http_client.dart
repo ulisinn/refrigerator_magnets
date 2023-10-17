@@ -63,7 +63,7 @@ class AppHttpClient {
         case HttpMethod.put:
           result = await _client.put(uri, body: jsonEncode(request.payload));
         case HttpMethod.delete:
-          result = await _client.delete(uri, body: jsonEncode(request.payload));
+          result = await _client.delete(uri);
         default:
           return AppResponse.failed();
       }
