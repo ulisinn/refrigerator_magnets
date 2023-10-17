@@ -27,3 +27,6 @@ https://pub.dev/documentation/jwt_decoder/latest/
 
 INTL:
 https://api.flutter.dev/flutter/intl/intl-library.html
+
+DIO
+https://pub.dev/packages/dio
