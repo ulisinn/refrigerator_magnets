@@ -11,9 +11,14 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login'),),
+      appBar: AppBar(
+        title: const Text('Login'),
+      ),
       body: const Center(
-        child: Text('Login'),
+        child: Text(
+          'Login Screen',
+          style: TextStyle(fontSize: 24),
+        ),
       ),
     );
   }

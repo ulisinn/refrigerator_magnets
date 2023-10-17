@@ -8,7 +8,7 @@ class LandingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Landing Screen'),),
       body: const Center(
-        child: Text('Landing Screen'),
+        child: Text('AuthenticatedLanding Screen'),
       ),
     );
   }

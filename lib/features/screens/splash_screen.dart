@@ -14,6 +14,13 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Text(
+              'Splash/Home Screen',
+              style: TextStyle(fontSize: 24),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
             ElevatedButton(
               onPressed: () {
                 context.go(AppRoute.login.name);

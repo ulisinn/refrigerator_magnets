@@ -11,10 +11,15 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(title: const Text('Create Account'),),
-    body: const Center(
-      child: Text('Create Account'),
-    ),
+      appBar: AppBar(
+        title: const Text('Create Account'),
+      ),
+      body: const Center(
+        child: Text(
+          'Create Account Screen',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
     );
   }
 }
