@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:magnets/core/networking/app_dio_client.dart';
 import 'package:magnets/core/networking/app_http_client.dart';
 import 'package:magnets/core/networking/app_request.dart';
 
@@ -10,29 +11,58 @@ class NetWorkClientScreen extends StatefulWidget {
 }
 
 class _NetWorkClientScreen extends State<NetWorkClientScreen> {
-  Future<dynamic> makeNetworkCallPost() async {
+  // http package
+  Future<dynamic> makeHttpClientCallPost() async {
     final Map<String, dynamic> jsonMap = {
       'userId': 1,
       'id': 1,
       'title': 'Some other title',
       'completed': false,
     };
-    final httpClient = AppHttpClient();
+    final client = AppHttpClient();
     final request = AppRequest(
       url: 'posts',
       payload: jsonMap,
     );
-    final response = await httpClient.post(request);
+    final response = await client.post(request);
     print('==== POST statusCode: ${response.statusCode}');
     print(response.rawResponse);
   }
 
-  Future<dynamic> makeNetworkCallGet() async {
-    final httpClient = AppHttpClient();
+  Future<dynamic> makeHttpClientCallGet() async {
+    final client = AppHttpClient();
     final request = AppRequest(
       url: 'todos/1',
     );
-    final response = await httpClient.get(request);
+    final response = await client.get(request);
+    print('==== GET statusCode: ${response.statusCode}');
+    print(response.rawResponse);
+  }
+
+  // Dio package
+  Future<dynamic> makeDioClientCallPost() async {
+    final Map<String, dynamic> jsonMap = {
+      'userId': 1,
+      'id': 1,
+      'title': 'Some other title',
+      'completed': false,
+    };
+    final client = AppDioClient();
+    final request = AppRequest(
+      url: 'posts',
+      payload: jsonMap,
+    );
+    final response = await client.post(request);
+    print('==== DIO POST statusCode: ${response.statusCode}');
+    // print(response.rawResponse);
+  }
+
+  Future<dynamic> makeDioClientCallGet() async {
+    final client = AppDioClient();
+    final request = AppRequest(
+      url: 'todos/1',
+    );
+    final response = await client.get(request);
     print('==== GET statusCode: ${response.statusCode}');
     print(response.rawResponse);
   }
@@ -41,7 +71,8 @@ class _NetWorkClientScreen extends State<NetWorkClientScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    makeNetworkCallGet();
+    // makeHttpClientCallGet();
+    makeDioClientCallGet();
   }
 
   @override
@@ -59,8 +90,8 @@ class _NetWorkClientScreen extends State<NetWorkClientScreen> {
               height: 30,
             ),
             ElevatedButton(
-                onPressed: makeNetworkCallPost,
-                child: Text('makeNetworkCallPost'))
+                onPressed: makeDioClientCallPost,
+                child: Text('makeHttpClientCallPost'))
           ],
         ),
       ),
