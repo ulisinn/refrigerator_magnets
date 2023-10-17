@@ -8,7 +8,7 @@ class AppResponse {
         statusCode = null,
         rawResponse = null;
 
-  final bool isValid;
   final int? statusCode;
   final Map<String, dynamic>? rawResponse;
+  final bool isValid;
 }

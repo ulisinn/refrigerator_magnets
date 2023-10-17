@@ -1,8 +1,17 @@
 import 'package:flutter/foundation.dart';
 
-class AppRequest{
+enum HttpMethod {
+  get,
+  post,
+  put,
+  patch,
+  delete,
+}
 
-  AppRequest({required this.url});
+class AppRequest {
+  AppRequest({required this.url, this.payload, this.method});
+
   final String url;
-
+  final HttpMethod? method;
+  final Map<String, dynamic>? payload;
 }

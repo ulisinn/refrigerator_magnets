@@ -3,7 +3,7 @@ import 'package:magnets/features/screens/authenticated_landing_screen.dart';
 import 'package:magnets/features/screens/create_account_screen.dart';
 import 'package:magnets/features/screens/login_screen.dart';
 import 'package:magnets/features/screens/logout.dart';
-import 'package:magnets/features/screens/network_client.dart';
+import 'package:magnets/features/screens/network_client_screen.dart';
 import 'package:magnets/features/screens/splash_screen.dart';
 
 enum AppRoute {
