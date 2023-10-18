@@ -23,7 +23,7 @@ enum AppRoute {
 }
 
 final routerConfig = GoRouter(
-    initialLocation: '/networkClient',
+    initialLocation: '/landing',
     debugLogDiagnostics: false,
     routes: [
       GoRoute(
