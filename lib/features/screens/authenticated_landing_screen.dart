@@ -7,8 +7,13 @@ class LandingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Landing Screen'),),
-      body: const Center(
-        child: Text('AuthenticatedLanding Screen'),
+      body:  Center(
+        child: Column(
+          children: [
+            Image.asset('comp_for_poc.jpg'),
+            const Text('AuthenticatedLanding Screen'),
+          ],
+        ),
       ),
     );
   }
