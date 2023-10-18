@@ -4,6 +4,8 @@ import 'package:intl/intl.dart';
 import 'package:jwt_decode/jwt_decode.dart';
 import 'package:magnets/routing/app_router.dart';
 
+import 'core/util/getTargetPlaform.dart';
+
 Future<void> main() async {
   await dotenv.load();
   // does not do anything at the moment
